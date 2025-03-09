@@ -1,4 +1,4 @@
-uri="mongodb://localhost:27017/test"
+uri="mongodb+srv://abhinav234799:Babaji%4079@cluster0.2l9nb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 PORT=8000
 RAZOR_PAY_KEY_ID=""
 RAZOR_PAY_KEY_SECRET=""
