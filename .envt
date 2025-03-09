@@ -1,7 +1,7 @@
 uri="mongodb+srv://abhinav234799:Babaji%4079@cluster0.2l9nb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 PORT=8000
-RAZOR_PAY_KEY_ID=""
-RAZOR_PAY_KEY_SECRET=""
+RAZOR_PAY_KEY_ID="rzp_test_1rvOJqaROhngLj"
+RAZOR_PAY_KEY_SECRET="aAXxtcrpbkbOurt89DEpuB6g"
 crickeys=""
 apikeys=""
 password="nkbupyhywlszchea"
