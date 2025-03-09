@@ -19,18 +19,18 @@ const transporter = nodemailer.createTransport(
     secure: false,
     requireTLS: true,
     auth: {
-      user: "rajeshmn47@gmail.com",
+      user: "jayandraa5@gmail.com",
       pass: process.env.password,
     },
   })
 );
 
 const client = new OAuth2Client(
-  "438326678548-td4f7iss3q98btacu17h57mpi8tpn7cq.apps.googleusercontent.com"
+  "112152617518-02japdi0205s223sdvmej2oqmfnbd6h1.apps.googleusercontent.com"
 );
 
 const clientId =
-  "438326678548-td4f7iss3q98btacu17h57mpi8tpn7cq.apps.googleusercontent.com";
+  "112152617518-02japdi0205s223sdvmej2oqmfnbd6h1.apps.googleusercontent.com";
 
 router.post("/googlelogin", async (req, res, next) => {
   const { tokenId } = req.body;
