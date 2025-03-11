@@ -38,7 +38,39 @@ const { cronjobs } = require("./updating/cronJobs.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors({ origin: "*", credentials: false }));
+
+
+// app.use(cors({ origin: "*", credentials: false })); 
+
+
+
+// CORS Configuration
+const corsOptions = {
+  origin: "https://wonderwin.leonxtgentech.com", // Only allow requests from this frontend
+  methods: "GET, POST, PUT, DELETE, OPTIONS",
+  allowedHeaders: "Content-Type, Authorization",
+  credentials: true, // Allow cookies and authorization headers
+};
+
+app.use(cors(corsOptions));
+app.options("*", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "https://wonderwin.leonxtgentech.com");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.sendStatus(204);
+});
+
+
+
+
+
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+
+
 app.use('/images', express.static(path.join('images')));
 app.use("/auth", auth);
 app.use("/", player);
